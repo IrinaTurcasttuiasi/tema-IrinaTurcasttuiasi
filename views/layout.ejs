@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ro-RO">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--scalare automata-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
+    <link rel="stylesheet" href="/css/stil.css">
+    <link rel="stylesheet" href="/css/tema1.css">
+    <script src="js/interactiuni.js"></script>
+    <script src="js/jquery-3.4.1.js"></script>
+    <title>SNES Wiki</title>
+</head>
+
+<body>
+    <!--1. bara de login-->
+    <div class="login has-text-right">
+        <a class="trigger">Autentificare</a> | <a class="trigger">Cont nou</a>
+        <div class="modal">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <h1>test modal</h1>
+            </div>
+        </div>
+    </div>
+
+    <!--2. header-->
+    <div class="header">
+        <header class="has-text-centered">
+            <h1 class="title"><img src="/img/snes logo.png" alt="Super Famicom Logo" class="logo">SNES Wiki</h1>
+        </header>
+    </div>
+
+    <!--zona de continut-->
+    <div class="content columns is-mobile">
+        <!--3. sectiuni-->
+        <div class="column is-one-fifth sections">
+            <%- include('../views/sectiuni'); -%>
+        </div>
+
+        <!--4. articole-->
+        <div class="column main">
+            <main class="panel">
+                <%- body -%>
+                <br />
+            </main>
+        </div>
+    </div>
+    
+    <!--5. subsol-->
+    <footer class="footer has-text-centered">
+        <h5>&copy; <a href="https://github.com/IrinaTurcasttuiasi/tema-IrinaTurcasttuiasi">IrinaTurcasttuiasi</a>-PW-2020</h5>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+{
+  "name": "tema-irinaturcasttuiasi",
+  "version": "1.0.0",
+  "description": "Tema la PW",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": "tema-IrinaTurcasttuiasi",
+  "author": "Irina Turcas",
+  "license": "ISC",
+  "dependencies": {
+    "bulma": "^0.8.2",
+    "cookie-parser": "^1.4.5",
+    "ejs": "^3.1.3",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-session": "^1.17.1",
+    "mysql": "^2.18.1",
+    "nodemon": "^2.0.4"
+  }
+}

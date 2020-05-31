@@ -1,0 +1,74 @@
+@font-face {
+    font-family: mr-saturn;
+    src: url('/fonts/SenorSaturno-Aw9g.ttf');
+}
+@font-face {
+    font-family: earthbound;
+    src: url('/fonts/EarthMomma-Regular.ttf');
+}
+@font-face {
+    font-family: title-screen;
+    src: url('/fonts/EarthBound.ttf');
+}
+
+html {
+    background-image: url('/img/background-1.png');
+}
+
+body {
+    font-family: earthbound;
+    font-size: small;
+    color: #e9e7b3;
+}
+
+.header {
+    background: linear-gradient(to bottom, rgba(255,255,255,0) 20%,
+              rgba(0, 0, 0, 0.5)), url('/img/header-1.gif');
+
+    /* https://css-tricks.com/almanac/properties/b/border-image/ */
+    border-radius: 13px;
+    border: 16px solid transparent;
+
+    border-image-source: url('/img/border-mint.png');
+    border-image-width: 16px;
+    border-image-slice: 16;
+    border-image-repeat: round;
+}
+
+.title {
+    font-family: mr-saturn;
+}
+
+.column {
+    border-radius: 13px;
+    border: 16px solid transparent;
+
+    border-image-source: url('/img/border-mint.png');
+    border-image-width: 16px;
+    border-image-slice: 16;
+    border-image-repeat: round;
+}
+
+.sections, .main {
+    background-color: #290829;
+}
+
+.footer {
+    color: #e9e7b3;
+    background-color: #290829;
+
+    border-radius: 13px;
+    border: 16px solid transparent;
+
+    border-image-source: url('/img/border-mint.png');
+    border-image-width: 16px;
+    border-image-slice: 16;
+    border-image-repeat: round;
+}
+
+a {
+    color: #68aade;
+}
+a:hover {
+    color: #81d887;
+}
