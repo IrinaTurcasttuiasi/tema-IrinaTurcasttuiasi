@@ -31,18 +31,9 @@
 
 .columns {
     margin: 5px;
-    margin-left: 0;
-    margin-right: 0;
 }
-
-.sections {
+.column {
     margin: 5px;
-    margin-left: 0;
-}
-
-.main {
-    margin: 5px;
-    margin-right: 0;
 }
 
 .footer {
