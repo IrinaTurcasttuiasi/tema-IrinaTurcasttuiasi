@@ -16,12 +16,5 @@ $(".login-trig").click(function() {
     $("html").addClass("is-clipped");
     $(target).addClass("is-active");
  });
- 
- $(".modal-close").click(function() {
-    $("html").removeClass("is-clipped");
-    $(this).parent().removeClass("is-active");
- });
 
  // modal de afisare date utilizator
-
- // delogare
