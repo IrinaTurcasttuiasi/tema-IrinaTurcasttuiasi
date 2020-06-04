@@ -7,22 +7,32 @@
     <!--scalare automata-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.5/css/bulma.css">
     <link rel="stylesheet" href="/css/stil.css">
-    <link rel="stylesheet" href="/css/tema1.css">
-    <script src="js/interactiuni.js"></script>
+    <link rel="stylesheet" href="/css/tema<%= Math.floor((Math.random() * 2)+1) %>.css">
+
     <script src="js/jquery-3.4.1.js"></script>
     <title>SNES Wiki</title>
 </head>
 
 <body>
-    <!--1. bara de login-->
-    <div class="login has-text-right">
-        <a class="trigger">Autentificare</a> | <a class="trigger">Cont nou</a>
-        <div class="modal">
-            <div class="modal-content">
-                <span class="close-button">&times;</span>
-                <h1>test modal</h1>
+    <% if(typeof err!=undefined) { %>
+        <% if(err) { %>
+            <div class="modal is-active">
+                <div class="modal-background"></div>
+                <div class="modal-content">
+        
+                    <p><%=err%></p>
+                    
+                </div>
+                <button class = "modal-close is-large" aria-label = "close"></button>
             </div>
-        </div>
+        <% }%> 
+    <% }%> 
+
+
+    <!--1. bara de login-->
+    <div class="login">
+        <%- include('../views/modal-user'); -%>
+        
     </div>
 
     <!--2. header-->

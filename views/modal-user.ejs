@@ -1,0 +1,50 @@
+<!--daca nu este logat utilizatorul-->
+<% if(typeof usr != undefined && loggedin == true) { %>
+    <div class="has-text-right login-text"><span><a class="user-trig" data-target = "#user-data"><%=usr.username%></a> |
+    <form action="/delogare" method="post" class="delogare">
+        <button type="submit" class="button is-small">Delogare</button>
+    </form></span></div>
+ <!--altfel-->
+<% } else { %>
+    <div class="has-text-right login-text"><span><a class="login-trig" data-target = "#login">Autentificare</a> | <a class="signup-trig" data-target = "#signup">Cont nou</a></span></div>
+    <div id="login" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+
+            <h1>Bine ai revenit!</h1><br/>
+
+            <form class="has-text-centered" action="autentificare"  method="POST">
+                <input type="text" placeholder="Nume de utilizator" name="username_login">
+                <input type="password" placeholder="Parolă" name="password_login"><br/>
+                <input type="submit" value="} Înregistrare" class="button">
+            </form>            
+        </div>
+        <button class = "modal-close is-large" aria-label = "close"></button>
+    </div>
+
+    <div id="signup" class="modal">
+        <div class="modal-background"></div>
+        <div class="modal-content">
+            <h1>Bine ai venit!</h1><br/>
+            <p>Câmpurile marcate cu steluță sunt obligatorii.</p><br/>
+            <form class="has-text-centered" action="cont-nou"  method="POST">
+                <input type="text" placeholder="* Nume de utilizator" name="username_signup">
+                <input type="email" placeholder="* Adresă de e-mail" name="email_signup">
+
+                <input type="password" placeholder="* Parolă" name="password_signup">
+                <input type="password" placeholder="* Confirmare parolă" name="password_confirm">
+                <br/>
+                
+                <input type="checkbox" name="accept_terms" class="checkbox">Sunt de acord cu termenii și condițiile.</input>
+                <br/>
+
+                <input type="submit" value="} Creează un cont" class="button">
+            </form>
+        </div>
+        <button class = "modal-close is-large" aria-label = "close"></button>
+    </div>
+<% } %> 
+<!--modal cu date despre utilizator-->
+
+<!-- js inline de la adresa https://www.tutorialspoint.com/bulma/bulma_components_modal.htm -->
+<script src="js/modal-user.js"></script>
